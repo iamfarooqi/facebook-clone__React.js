@@ -1,0 +1,7 @@
+.App{
+    background-color: #f2f2f5;
+}
+
+.app__body{
+    display: flex;
+}
