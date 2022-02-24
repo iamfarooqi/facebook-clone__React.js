@@ -7,11 +7,14 @@
     padding: 15ps 20px;
     background-color: white;
     box-shadow: 0px 5px 8px -9px black(0, 0, 0, 0, 0.75);
+    /* border: red solid 1px; */
+
 }
 
 .header__left{
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: center; */
+    align-items: center;
 }
 
 .header__left>img{
@@ -19,24 +22,33 @@
 }
 
 .header__input{
+    margin-top: 12px;
+    height: 40px;
     display: flex;
     align-items: center;
-    padding: 10px;
+    /* padding: 10px; */
     margin-left: 10px;
-    border-radius: 33px;
+    border-radius: 20px;
     background-color: #eff2f5;
+
 }
 
 .header__input>input{
     border: none;
     background-color: transparent;
     outline-width: 0;
+    padding: 5px;
+}
+
+.header__input>.MuiSvgIcon-root{
+    padding-left: 8px;
 }
 
 .header__center{
     display: flex;
     flex: 1;
-    justify-content: center;
+    justify-content: space-between;
+    /* border: blue 1px solid; */
 }
 
 .header__option{

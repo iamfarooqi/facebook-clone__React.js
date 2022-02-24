@@ -11,7 +11,6 @@ import { db } from '../firebase'
 import { firestore } from 'firebase'
 
 const Feed = () => {
-    // const [{ user }, dispatch] = useStateValue()
     const [posts, setPosts] = useState([])
 
     useEffect(() => {
@@ -38,7 +37,7 @@ const Feed = () => {
                     photoURL={post.data.photoURL}
                     image={post.data.image}
                     username={post.data.username}
-                    timestamp='01:04'
+                    timestamp='12:00'
                     message={post.data.message}
                     />
                 ))

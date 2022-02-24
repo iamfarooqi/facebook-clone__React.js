@@ -37,19 +37,19 @@ const Header = () => {
                    
                 </div>
                 <div className='header__option header__option--active'>
-                    <HomeIcon fontsize='large' />
+                    <HomeIcon fontSize='large' />
                 </div>
                 <div className='header__option'>
-                    <FlagIcon fontsize='large' />
+                    <FlagIcon fontSize='large' />
                 </div>
                 <div className='header__option'>
-                    <StorefrontIcon fontsize='large' />
+                    <StorefrontIcon fontSize='large' />
                 </div>
                 <div className='header__option'>
-                    <SubscriptionsOutlinedIcon fontsize='large' />
+                    <SubscriptionsOutlinedIcon fontSize='large' />
                 </div>
                 <div className='header__option'>
-                    <SupervisedUserCircleIcon fontsize='large' />
+                    <SupervisedUserCircleIcon fontSize='large' />
                 </div>
                 <div className='header__option'>
                     

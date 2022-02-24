@@ -67,7 +67,7 @@ const MessageSender = () => {
                 },
                 ()=>{
                     storage.ref("images").child(image.name).getDownloadURL().then(url=>{
-                    firestore().collection("posts").add({
+                    db.collection("posts").add({
                         timestamp:firebase.firestore.FieldValue.serverTimestamp(),
                         message:message,
                         username:user.displayName,

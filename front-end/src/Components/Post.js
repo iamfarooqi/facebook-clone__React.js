@@ -22,6 +22,7 @@ const Post = ({photoURL,image,username,timestamp,message}) => {
     return (
 
         <div className='post' >
+
             <div className='post_top'>
                 <div className='post_topLeft'>
                     <Avatar src={photoURL}/>
@@ -34,16 +35,14 @@ const Post = ({photoURL,image,username,timestamp,message}) => {
                 {/* <MoreHorizIcon/> */}
                 </div>
 
+
+            </div>
                 <div className='post_middle'>
                     <p>
                         {message}
                     </p>
 
                     {image && <img src={image}/>}
-
-                    {/* <img src='https://c4.wallpaperflare.com/wallpaper/586/603/742/minimalism-4k-for-mac-desktop-wallpaper-preview.jpg'/> */}
-
-                </div>
 
                 </div>
 
@@ -64,10 +63,7 @@ const Post = ({photoURL,image,username,timestamp,message}) => {
                     <NearMeIcon />
                     <p>Share</p>
                 </div>
-                <div className="post__option">
-                    <AccountCircleIclon />
-                    <ExpandMoreOutlined />
-                </div>
+            
             </div>
 
         </div>
