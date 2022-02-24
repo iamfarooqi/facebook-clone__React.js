@@ -5,51 +5,70 @@ import ExpandMoreOutlined from '@material-ui/icons/ExpandMoreOutlined';
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 import ChatBubbleOutlineIcon from '@material-ui/icons/ChatBubbleOutline';
 import NearMeIcon from '@material-ui/icons/NearMe';
-import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+import AccountCircleIclon from '@material-ui/icons/AccountCircle'
+import { useState } from 'react'
+import PublicIcon from '@material-ui/icons/Public';
+import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 
 
 
 
-const Post = ({ profilePic, imgName, username, timestamp, message }) => {
+
+const Post = ({photoURL,image,username,timestamp,message}) => {
+    // const [posts, setPosts] = useState([])
+
+    // console.log(timestamp)
+
     return (
-        <div className='post'>
 
-            <div className='post__top'>
-                <Avatar profilePic={profilePic} className='post__avatar' />
-                <div className='post__topInfo'>
-                    <h3>{username}</h3>
-                    <p>{new Date(parseInt(timestamp)).toUTCString()}</p>
+        <div className='post' >
+            <div className='post_top'>
+                <div className='post_topLeft'>
+                    <Avatar src={photoURL}/>
+
+                    <div className='postInfo'>
+                        <h4>{username}</h4>
+                        <p>{timestamp} <PublicIcon/></p>
+                    </div>
+
+                {/* <MoreHorizIcon/> */}
                 </div>
 
-            </div>
+                <div className='post_middle'>
+                    <p>
+                        {message}
+                    </p>
 
-            <div className='post__bottom'>
-                <p>{message}</p>
-                {/* image */}
-            </div>
+                    {image && <img src={image}/>}
+
+                    {/* <img src='https://c4.wallpaperflare.com/wallpaper/586/603/742/minimalism-4k-for-mac-desktop-wallpaper-preview.jpg'/> */}
+
+                </div>
+
+                </div>
 
 
-            <div className='post__options'>
+            
+        
 
-                <div className='post__option'>
+            <div className="post__options">
+                <div className="post__option">
                     <ThumbUpIcon />
                     <p>Like</p>
                 </div>
-                <div className='post__option'>
+                <div className="post__option">
                     <ChatBubbleOutlineIcon />
                     <p>Comment</p>
                 </div>
-                <div className='post__option'>
+                <div className="post__option">
                     <NearMeIcon />
                     <p>Share</p>
                 </div>
-                <div className='post__option'>
-                    <AccountCircleIcon />
+                <div className="post__option">
+                    <AccountCircleIclon />
                     <ExpandMoreOutlined />
                 </div>
-
             </div>
-
 
         </div>
     );

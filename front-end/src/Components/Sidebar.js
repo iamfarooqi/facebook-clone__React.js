@@ -8,15 +8,18 @@ import ChatIcon from '@material-ui/icons/Chat'
 import StorefrontIcon from '@material-ui/icons/Storefront';
 import VideoLibraryICon from '@material-ui/icons/VideoLibrary'
 import ExpandMoreOutlined from '@material-ui/icons/ExpandMoreOutlined'
-// import { useStateValue } from './stateProvider';
+import { useStateValue } from '../StateProvider'
+
 
 
 const Sidebar = () => {
+    const [{ user }, dispatch] = useStateValue()
+
     return (
         <div className='sidebar'>
 
-        <SidebarRow src='https://www.propertytwinsswfl.com/wp-content/uploads/2018/09/dummy-profile-pic-male.jpg' 
-        title='Farooqi'/>
+        <SidebarRow src={user.photoURL} 
+        title={user.displayName}/>
         <SidebarRow Icon={LocalHospitalIcon} 
         title='COVID-19'/>
         <SidebarRow Icon={EmojiFlagIcon} 

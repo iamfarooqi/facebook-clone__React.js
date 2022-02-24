@@ -12,13 +12,34 @@
 
 .post__top{
         display: flex;
-        position: relative;
+        justify-content: space-between;
+        /* position: relative;
         align-items: center;
-        padding: 15px;
+        padding: 15px; */
     }
+
+.post_topLeft{
+    display: flex;
+    /* align-items: center; */
+}
+.postInfo{
+    margin-left: 10px;
+}
+
+.postInfo p{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+}
 
 .post__avatar{
     margin-right: 10px;
+}
+
+.postInfo p svg{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
 }
 
 .post__topInfo>h3{
@@ -28,6 +49,13 @@
 .post__topInfo>p{
     font-size: small;
     color: gray;
+}
+
+.post_middle img{
+    width: 90%;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
 }
 
 .post__bottom{

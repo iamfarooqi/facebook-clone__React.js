@@ -1,35 +1,50 @@
-import React from 'react';
-import MessageSender from './MessageSender';
-import StoryReel from './StoryReel';
+import React, { useEffect, useState } from 'react'
+import './Feed.css'
+import MessageSender from './MessageSender'
 import Post from './Post'
-
-
+import StoryReel from './StoryReel'
+// import axios from '../axios'
+// import Pusher from '../'
+// import db from '../firebase'
+// import {useStateValue} from '../StateProvider';
+import { db } from '../firebase'
+import { firestore } from 'firebase'
 
 const Feed = () => {
+    // const [{ user }, dispatch] = useStateValue()
+    const [posts, setPosts] = useState([])
+
+    useEffect(() => {
+        firestore().collection("posts").orderBy("timestamp", "desc").onSnapshot(snapshot=>{
+            setPosts(snapshot.docs.map(doc=>({
+                id:doc.id,
+                data:doc.data(),
+            })))
+        })
+    },[]);
+
+    console.log(posts)
+    console.log(posts.image)
+      
+        
     return (
         <div className='feed'>
             <StoryReel />
             <MessageSender />
 
-            <Post
-            profilePic='https://www.propertytwinsswfl.com/wp-content/uploads/2018/09/dummy-profile-pic-male.jpg'
-            message='Hello World'
-            timestamp='1645272354096'
-            imgName='imgName'
-            username='Farooqi'
-            />
-            
-            {/* {
-                PostData.map(entry =>{
-                    <Post 
-                    profilePic={entry.avatar}
-                    message={entry.text}
-                    timestamp={entry.timestamp}
-                    imgName={entry.imgName}
-                    username={entry.user}
+            {
+                posts.map(post=>(
+                    <Post
+                    photoURL={post.data.photoURL}
+                    image={post.data.image}
+                    username={post.data.username}
+                    timestamp='01:04'
+                    message={post.data.message}
                     />
-                })
-            } */}
+                ))
+            }
+
+
         </div>
     );
 };
