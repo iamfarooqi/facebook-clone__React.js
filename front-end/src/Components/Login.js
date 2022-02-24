@@ -11,7 +11,7 @@ const Login = () => {
     const signIn = () => {
         auth.signInWithPopup(provider)
             .then(result => {
-                console.log(result)
+                // console.log(result)
                 var credential = result.credential;
                 const photoURL = `${result.user.photoURL}?access_token=${credential.accessToken}`
 

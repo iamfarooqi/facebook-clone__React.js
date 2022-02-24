@@ -15,9 +15,7 @@ import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 
 
 const Post = ({photoURL,image,username,timestamp,message}) => {
-    // const [posts, setPosts] = useState([])
 
-    // console.log(timestamp)
 
     return (
 

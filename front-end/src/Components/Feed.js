@@ -22,8 +22,8 @@ const Feed = () => {
         })
     },[]);
 
-    console.log(posts)
-    console.log(posts.image)
+    // console.log(posts.image)
+    // console.log(posts)
       
         
     return (
