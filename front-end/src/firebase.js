@@ -12,7 +12,7 @@ import 'firebase/firestore';
   });
 
  const auth = firebase.auth();
- const provider = new firebase.auth.FacebookAuthProvider();
+ const provider = new firebase.auth.GoogleAuthProvider();
 
  const db= firebaseConfig.firestore();
  const storage = firebase.storage()
