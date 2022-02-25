@@ -10,7 +10,7 @@ import NotificationsActiveIcon  from '@material-ui/icons/NotificationsActive';
 import ForumIcon from '@material-ui/icons/Forum';
 import StorefrontIcon from '@material-ui/icons/Storefront';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import AddIcon from '@material-ui/icons/Add';
+import MenuIcon from '@material-ui/icons/Menu';
 import { useStateValue } from '../StateProvider'
 import './Header.css';
 
@@ -64,7 +64,7 @@ const Header = () => {
                     <h4>{user.displayName}</h4>
                 </div>
                 <IconButton>
-                    <AddIcon/>
+                    <MenuIcon/>
                 </IconButton>
 
                 <IconButton>

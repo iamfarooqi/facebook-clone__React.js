@@ -76,7 +76,7 @@
 }
 
 .header__option>.MuiSvgIcon-root{
-    color: grey;
+    color: rgb(68, 66, 66);
 }
 
 .header__option:hover>.MuiSvgIcon-root{
